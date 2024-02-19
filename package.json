@@ -3,7 +3,8 @@
     "test": "nodemon --exec 'npm run build && npm run lint && node dist/index.js' --watch src --ext ts",
     "build": "tsc",
     "build:watch": "tsc --watch",
-    "lint": "eslint . --ext .ts"
+    "lint": "eslint . --ext .ts",
+    "tw": "npx tailwindcss -i style.tailwind.css -o ./public/css/style.min.css --watch --minify"
   },
   "dependencies": {
     "dotenv": "^16.4.4",
