@@ -2,12 +2,9 @@ import express from 'express';
 import dotenv from 'dotenv';
 import path from 'path';
 import staticServe from 'serve-static';
-import pjson from '../package.json';
 
 dotenv.config()
 const app = express();
-
-const version = pjson.version;
 
 // View engine setup
 app.set('view engine', 'ejs');
@@ -21,7 +18,7 @@ import compression from 'compression';
 app.use(compression({ threshold: 150, level: 9 }));
 
 app.use ((req, res, next) => {
-    res.setHeader('X-Powered-By', `Open Suite v${version}`);
+    res.removeHeader('X-Powered-By')
     next();
 });
 
