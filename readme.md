@@ -5,15 +5,14 @@
 ![Docker Pulls](https://img.shields.io/docker/pulls/opensuite/hub?style=flat-square)
 ![Codacy grade](https://img.shields.io/codacy/grade/51108f51c81444fda5da0f0316cb8b55?style=flat-square)
 
-Open Suite is a interconnected business suite used for everything from customer managment to project managment, fully open-source and self-hosted with the ability to only use what is required.
-
+Open Suite is an interconnected business suite designed for diverse functions ranging from customer management to project management. It is fully open-source and self-hosted, offering the flexibility to utilize only the necessary components.
 
 ## Features
 
-- 🎨 **Customisable**: Customise your instance of open suite to best reflect your organisations operations.
-- 📦 **Componentised**: Only use what you need, either download a official component, community componment or create one yourself.
-- 📖 **Open-source**: All code is free and open-source forever, we will never put a price on extra features.
-- ♾️ **Unlimited users**: No limit on users, and certently no fee for more users.
+- 🎨 **Customisable**: Tailor your instance of Open Suite to match your organization's operations seamlessly.
+- 📦 **Componentised**: Select only the components you need; choose from official, community, or self-created components.
+- 📖 **Open-source**: All code is perpetually free and open-source; there will never be a charge for additional features.
+- ♾️ **Unlimited users**: No user limits, and absolutely no fees for additional users.
 
 ## Get started
 
@@ -51,19 +50,19 @@ docker compose up
 
 ## Support
 
-If you have general questions about OpenSuite, want to say hello or just follow along, we'd like to invite you to message on our [Gituhb Discussions](https://github.com/orgs/open-suite/discussions).
+If you have general questions about OpenSuite, want to say hello, or simply follow along, we invite you to join our [GitHub Discussions](https://github.com/orgs/open-suite/discussions).
 
-If you run into any problems or issues, please create a Github issue and we'll try our best to help.
+Should you encounter any problems or issues, please create a GitHub issue, and we'll do our best to assist you.
 
-We strive to provide good support through our issue trackers on Github. 
+We aim to deliver excellent support through our GitHub issue trackers.
 
 ## Contributing
 
-See our "Getting-Started" guide for instructions on [development setup](https://github.com/open-suite/getting-started).
+Explore our "Getting Started" guide for instructions on setting up your [development environment](https://github.com/open-suite/getting-started).
 
-We ❤️ contributions big or small, check out our [guide on how to get started](https://github.com/open-suite/getting-started).
+We welcome contributions of all sizes! Check out our [guide on how to get started](https://github.com/open-suite/getting-started).
 
-Not sure where to start? [Ask on our discussions page](https://github.com/orgs/open-suite/discussions).
+Unsure where to begin? Feel free to ask on our [discussions page](https://github.com/orgs/open-suite/discussions).
 
 ### Contributors
 
@@ -71,12 +70,11 @@ Not sure where to start? [Ask on our discussions page](https://github.com/orgs/o
   <img src="https://contrib.rocks/image?repo=open-suite/hub" />
 </a>
 
-
 ## License
 
-This project uses the [Apache v2 license](LICENSE). The core Karrio platform will always remain open and free.
+This project is licensed under the [Apache v2 license](LICENSE). The core OpenSuite platform will always remain open and free.
 
-Any other questions, mail us at <reeceharris@duck.com> We’d love to meet you!
+For any further questions, feel free to email us at <reeceharris@duck.com>. We'd love to hear from you!
 
 
 ### Become a sponsor
