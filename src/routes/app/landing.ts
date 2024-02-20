@@ -6,7 +6,7 @@ import dotenv from 'dotenv';
 dotenv.config()
 const router = express.Router();
 
-router.get('/', async (_r, res) => {
+router.get('/', (_r, res) => {
     res.render('landing');
 });
 
