@@ -19,4 +19,4 @@ fs.readdirSync(appDir).forEach(function(file) {
     router.use('/', r);
 });
 
-module.exports = router;
+export default router;

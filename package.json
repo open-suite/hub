@@ -1,19 +1,20 @@
 {
+  "version": "1.0.0",
   "scripts": {
     "test": "nodemon --exec 'npm run clean && npm run build && npm run lint && node dist/index.js' --watch src -e ts,ejs",
     "clean": "rm -rf dist",
-    "pack": "rm -rf dist.webpack && webpack",
-    "build": "tsc && cp -r views dist/views && cp -r public dist/public",
-    "build:watch": "tsc --watch",
+    "build": "tsc && cp -r views dist/views && cp -r public dist/public && cp -r .env dist/.env && mv dist/src/* dist/ && rm -rf dist/src",
     "lint": "eslint . --ext .ts",
     "tw": "npx tailwindcss -i style.tailwind.css -o ./public/css/style.min.css --watch --minify"
   },
   "dependencies": {
+    "compression": "^1.7.4",
     "dotenv": "^16.4.4",
     "ejs": "^3.1.9",
     "express": "^4.18.2"
   },
   "devDependencies": {
+    "@types/compression": "^1.7.5",
     "@types/express": "^4.17.21",
     "@types/node": "^20.11.19",
     "@typescript-eslint/eslint-plugin": "^7.0.1",
