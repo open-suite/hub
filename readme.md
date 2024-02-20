@@ -39,8 +39,6 @@ cd hub/docker
 docker compose up
 ```
 
-<br>
-
 > [!NOTE]
 > Once running you can access and configure OpenSuite.
 > 
@@ -65,9 +63,7 @@ Unsure where to begin? Feel free to ask on our [discussions page](https://github
 
 ### Contributors
 
-<a href="https://github.com/open-suite/hub/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=open-suite/hub" />
-</a>
+[![Contributors](https://contrib.rocks/image?repo=open-suite/hub)](https://github.com/open-suite/hub/graphs/contributors)
 
 ## License
 
@@ -78,4 +74,4 @@ For any further questions, feel free to email us at <reeceharris@duck.com>. We'd
 
 ### Become a sponsor
 
-<a href="https://github.com/sponsors/notreeceharris" target="_blank"><img alt="New Sponsor" src="extra/become-a-sponsor.png" /></a>
+[![become a sponsor](extra/become-a-sponsor.png)](https://github.com/sponsors/notreeceharris)
