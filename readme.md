@@ -1,5 +1,5 @@
 
-<img src="./extra/logo.png" width="300">
+<img src="./extra/logo.svg" width="300">
 
 ![GitHub License](https://img.shields.io/github/license/open-suite/hub?style=flat-square)
 ![Docker Pulls](https://img.shields.io/docker/pulls/opensuite/hub?style=flat-square)
