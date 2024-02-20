@@ -20,7 +20,7 @@ fi
 
 # Proceed with the script if Git, Docker, and Docker Compose are installed
 timestamp="$(date +%s)"
-first_three_digits="$(echo $timestamp | cut -c 1-5)"
+first_three_digits="$(echo "$timestamp" | cut -c 7-11)"
 
 git clone https://github.com/open-suite/hub "$first_three_digits-OpenSuite"
 cd "$first_three_digits-OpenSuite/docker"

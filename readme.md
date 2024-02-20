@@ -71,7 +71,6 @@ This project is licensed under the [Apache v2 license](LICENSE). The core OpenSu
 
 For any further questions, feel free to email us at <reeceharris@duck.com>. We'd love to hear from you!
 
-
 ### Become a sponsor
 
 [![become a sponsor](extra/become-a-sponsor.png)](https://github.com/sponsors/notreeceharris)
