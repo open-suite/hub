@@ -19,9 +19,9 @@ if ! command -v docker-compose &> /dev/null; then
 fi
 
 # Proceed with the script if Git, Docker, and Docker Compose are installed
-timestamp=$(date +%s)
-first_three_digits=$(echo $timestamp | cut -c 1-5)
+timestamp="$(date +%s)"
+first_three_digits="$(echo $timestamp | cut -c 1-5)"
 
 git clone https://github.com/open-suite/hub "$first_three_digits-OpenSuite"
-cd $first_three_digits-OpenSuite/docker
+cd "$first_three_digits-OpenSuite/docker"
 docker-compose up
