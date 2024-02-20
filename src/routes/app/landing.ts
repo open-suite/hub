@@ -7,7 +7,7 @@ dotenv.config()
 const router = express.Router();
 
 router.get('/', async (_r, res) => {
-    res.send('Hello World!')
+    res.render('landing');
 });
 
 module.exports = router;
