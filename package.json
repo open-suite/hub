@@ -6,7 +6,7 @@
     "clean:win": "rmdir /s /q dist",
     "build": "tsc && cp -r views dist/views && cp -r public dist/public && cp -r .env dist/.env && cp -r package.json dist/package.json && mv dist/src/* dist/ && rm -rf dist/src",
     "build:win": "tsc && echo d | xcopy /d /s /e views dist\\views && echo d |xcopy /d /s /e public dist\\public && echo f | xcopy /f .env dist\\.env && echo f | xcopy /f package.json dist\\package.json && xcopy /s /i dist\\src\\* dist\\ && rmdir /s /q dist\\src",
-    "build:docker": "docker build -t opensuite:hub .",
+    "build:docker": "docker build -t hub:opensuite .",
     "lint": "eslint . --ext .ts",
     "tw": "npx tailwindcss -i style.tailwind.css -o ./public/css/style.min.css --watch --minify"
   },
