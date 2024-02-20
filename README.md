@@ -1,0 +1,2 @@
+# hub
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/59b7ad0c253f4129b0629671675a2ee4)](https://app.codacy.com/gh/open-suite/hub?utm_source=github.com&utm_medium=referral&utm_content=open-suite/hub&utm_campaign=Badge_Grade)
