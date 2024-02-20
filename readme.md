@@ -1,5 +1,5 @@
 
-<img src="./extra/logo.png" width="300">
+<img src="./extra/logo.svg" width="300" alt="Open Suite">
 
 ![GitHub License](https://img.shields.io/github/license/open-suite/hub?style=flat-square)
 ![Docker Pulls](https://img.shields.io/docker/pulls/opensuite/hub?style=flat-square)
@@ -19,10 +19,9 @@ Open Suite is an interconnected business suite designed for diverse functions ra
 ### Dependencies
 
 Before getting started with Open Suite, ensure you have the following dependencies installed:
+
 - [Node.js v20.x](https://nodejs.org/download/release/latest-v20.x/): Node.js is required for running Open Suite.
 - [Docker Compose](https://docs.docker.com/compose/install/): If you plan on using Docker, make sure you have the latest version of Docker Compose installed.
-
-
 
 ### Install
 
