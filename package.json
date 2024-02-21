@@ -4,8 +4,9 @@
     "test": "nodemon --exec 'npm run clean && npm run build && npm run lint && node dist/index.js' --watch src -e ts,ejs",
     "clean": "rm -rf dist",
     "clean:win": "rmdir /s /q dist",
-    "build": "tsc && cp -r views dist/views && cp -r public dist/public && cp -r .env dist/.env && mv dist/src/* dist/ && rm -rf dist/src",
-    "build:win": "tsc && echo d | xcopy /d /s /e views dist\\views && echo d |xcopy /d /s /e public dist\\public && echo f | xcopy /f .env dist\\.env && xcopy /s /i dist\\src\\* dist\\ && rmdir /s /q dist\\src",
+    "build": "tsc && cp -r views dist/views && cp -r public dist/public && cp -r .env dist/.env && cp -r package.json dist/package.json && mv dist/src/* dist/ && rm -rf dist/src",
+    "build:win": "tsc && echo d | xcopy /d /s /e views dist\\views && echo d |xcopy /d /s /e public dist\\public && echo f | xcopy /f .env dist\\.env && echo f | xcopy /f package.json dist\\package.json && xcopy /s /i dist\\src\\* dist\\ && rmdir /s /q dist\\src",
+    "build:docker": "docker build -t hub:opensuite .",
     "lint": "eslint . --ext .ts",
     "tw": "npx tailwindcss -i style.tailwind.css -o ./public/css/style.min.css --watch --minify"
   },
@@ -13,7 +14,15 @@
     "compression": "^1.7.4",
     "dotenv": "^16.4.4",
     "ejs": "^3.1.9",
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "mariadb": "^3.2.3",
+    "mysql2": "^3.9.1",
+    "oracledb": "^6.3.0",
+    "pg": "^8.11.3",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.37.1",
+    "sqlite3": "^5.1.7",
+    "tedious": "^17.0.0"
   },
   "devDependencies": {
     "@types/compression": "^1.7.5",
