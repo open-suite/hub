@@ -1,40 +1,27 @@
-import express from 'express';
-import dotenv from 'dotenv';
-import path from 'path';
-import staticServe from 'serve-static';
-import { engine } from 'express-handlebars';
+import init from './database';
+import { promises as fsPromises } from 'fs';
 
-dotenv.config()
-const app = express();
+(async () => {
 
-// View engine setup
-app.engine('handlebars', engine());
-app.set('view engine', 'handlebars');
-app.set('views', path.join(__dirname, 'views'));
+    const data = await fsPromises.readFile('./package.json', 'utf8');
+    const packageJson = JSON.parse(data);
+    const version = packageJson.version;
 
-// Middleware
-app.use(express.urlencoded({ extended: true }));
-app.use(express.json());
+    console.log(`
+------------------------------------------------
+Open Suite HUB v${version}
 
-import compression from 'compression';
-app.use(compression({ threshold: 150, level: 9 }));
+Environment : ${process.env.NODE_ENV}
+Started     : ${new Date().toISOString()}
+------------------------------------------------
+    `);
 
-app.use ((req, res, next) => {
-    res.removeHeader('X-Powered-By')
-    next();
-});
+    console.log('Initialising database...')
+    console.time('Database Initialised');
 
-// Routes
-import appRouter from './routes/app';
-app.use('/', appRouter);
-app.use('/cdn/', staticServe(path.join(__dirname, 'public')));
+    const sequelize = await init();
 
-// Start Listening
-app.listen(process.env.port, () => {
-    console.log(`Example app listening on port ${process.env.port}`)
-}) 
+    console.timeEnd('Database Initialised');
 
-// Error Handling
-app.on('error', (err) => {
-    console.error(err);
-});
+    // console.log(sequelize);
+})()
