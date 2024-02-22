@@ -7,7 +7,10 @@ module.exports = {
   content: ['./views/**/**.{html,ejs}', './public/js/*.js'],
   theme: {
     extend: {
-      colors: {}
+      colors: {
+        clinically: "#524c56",
+        "chinese-black": "#100D12"
+      }
     }
   },
   plugins: []

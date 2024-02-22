@@ -21,7 +21,8 @@ const init = async () => {
 
             sequelize = new Sequelize({
                 dialect: 'sqlite',
-                storage: process.env.SQLITE_PATH
+                storage: process.env.SQLITE_PATH,
+                logging: false
             });
 
             break;
@@ -51,7 +52,8 @@ const init = async () => {
             sequelize = new Sequelize(process.env.PG_DB, process.env.PG_USER, process.env.PG_PASS, {
                 host: process.env.PG_HOST,
                 port: parseInt(process.env.PG_PORT),
-                dialect: 'postgres'
+                dialect: 'postgres',
+                logging: false
             });
 
             break;
@@ -81,7 +83,8 @@ const init = async () => {
             sequelize = new Sequelize(process.env.MYSQL_DB, process.env.MYSQL_USER, process.env.MYSQL_PASS, {
                 host: process.env.MYSQL_HOST,
                 port: parseInt(process.env.MYSQL_PORT),
-                dialect: 'mysql'
+                dialect: 'mysql',
+                logging: false
             });
 
             break;
@@ -111,7 +114,8 @@ const init = async () => {
             sequelize = new Sequelize(process.env.MARIADB_DB, process.env.MARIADB_USER, process.env.MARIADB_PASS, {
                 host: process.env.MARIADB_HOST,
                 port: parseInt(process.env.MARIADB_PORT),
-                dialect: 'mariadb'
+                dialect: 'mariadb',
+                logging: false
             });
 
             break;
