@@ -1,9 +1,9 @@
 {
   "version": "1.0.0",
   "scripts": {
-    "test": "nodemon --exec 'npm run clean && npm run build && npm run lint && node dist/index.js' --watch src -e ts,ejs",
-    "test:win": "nodemon --exec npm run test:win:command --watch src -e ts,ejs",
-    "test:win:command": "npm run clean:win && npm run build:win && npm run lint && node dist/index.js",
+    "test": "nodemon --exec 'npm run clean && npm run build && node dist/index.js' --watch src --watch views -e ts,handlebars",
+    "test:win": "nodemon --exec npm run test:win:command --watch src --watch views -e ts,handlebars",
+    "test:win:command": "npm run clean:win && npm run build:win && node dist/index.js",
     "clean": "rm -rf dist",
     "clean:win": "rmdir /s /q dist || echo \"\"",
     "build": "tsc && cp -r views dist/views && cp -r public dist/public && cp -r .env dist/.env && cp -r package.json dist/package.json && mv dist/src/* dist/ && rm -rf dist/src",
