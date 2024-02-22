@@ -5,5 +5,6 @@ import express from 'express';
 const router = express.Router();
 
 router.use('/', require('./app/landing'));
+router.use('/', require('./app/security'));
 
 export default router;

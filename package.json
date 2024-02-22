@@ -2,10 +2,12 @@
   "version": "1.0.0",
   "scripts": {
     "test": "nodemon --exec 'npm run clean && npm run build && npm run lint && node dist/index.js' --watch src -e ts,ejs",
+    "test:win": "nodemon --exec npm run test:win:command --watch src -e ts,ejs",
+    "test:win:command": "npm run clean:win && npm run build:win && npm run lint && node dist/index.js",
     "clean": "rm -rf dist",
-    "clean:win": "rmdir /s /q dist",
+    "clean:win": "rmdir /s /q dist || echo \"\"",
     "build": "tsc && cp -r views dist/views && cp -r public dist/public && cp -r .env dist/.env && cp -r package.json dist/package.json && mv dist/src/* dist/ && rm -rf dist/src",
-    "build:win": "tsc && echo d | xcopy /d /s /e views dist\\views && echo d |xcopy /d /s /e public dist\\public && echo f | xcopy /f .env dist\\.env && echo f | xcopy /f package.json dist\\package.json && xcopy /s /i dist\\src\\* dist\\ && rmdir /s /q dist\\src",
+    "build:win": "tsc && echo d | xcopy /d /s /e views dist\\views && echo d |xcopy /d /s /e public dist\\public && echo f | xcopy /f .env dist\\.env && echo f | xcopy /f package.json dist\\package.json && xcopy /s /i dist\\src\\* dist\\ && rmdir /s /q dist\\src || echo \"\"",
     "build:docker": "docker build -t hub:opensuite .",
     "lint": "eslint . --ext .ts",
     "tw": "npx tailwindcss -i style.tailwind.css -o ./public/css/style.min.css --watch --minify"
@@ -14,11 +16,13 @@
     "compression": "^1.7.4",
     "dotenv": "^16.4.4",
     "ejs": "^3.1.9",
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "express-handlebars": "^7.1.2"
   },
   "devDependencies": {
     "@types/compression": "^1.7.5",
     "@types/express": "^4.17.21",
+    "@types/express-handlebars": "^6.0.0",
     "@types/node": "^20.11.19",
     "@typescript-eslint/eslint-plugin": "^7.0.1",
     "@typescript-eslint/parser": "^7.0.1",
@@ -26,6 +30,7 @@
     "babel-preset-env": "^1.7.0",
     "eslint": "^8.56.0",
     "nodemon": "^3.0.3",
+    "npm": "^10.4.0",
     "webpack": "^5.90.3",
     "webpack-cli": "^5.1.4",
     "webpack-node-externals": "^3.0.0"

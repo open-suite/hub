@@ -2,12 +2,14 @@ import express from 'express';
 import dotenv from 'dotenv';
 import path from 'path';
 import staticServe from 'serve-static';
+import { engine } from 'express-handlebars';
 
 dotenv.config()
 const app = express();
 
 // View engine setup
-app.set('view engine', 'ejs');
+app.engine('handlebars', engine());
+app.set('view engine', 'handlebars');
 app.set('views', path.join(__dirname, 'views'));
 
 // Middleware
