@@ -7,7 +7,7 @@ dotenv.config()
 const router = express.Router();
 
 router.get('/login', (_r, res) => {
-    res.render('login');
+    res.render('login', { layout: false });
 });
 
 module.exports = router;

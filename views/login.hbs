@@ -1,90 +1,114 @@
-<svg class="fill-white hover:fill-white/[.8] cursor-pointer w-9 h-9 absolute top-5 left-5 " width="155" height="155"
-    viewBox="0 0 155 155" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path fill-rule="evenodd" clip-rule="evenodd"
-        d="M49 118C49 116.343 50.3431 115 52 115L110 115C112.761 115 115 112.761 115 110L115 45C115 42.2386 112.761 40 110 40L46 40C42.6863 40 40 42.6863 40 46L40 103C40 104.657 38.6569 106 37 106L3 106C1.34315 106 4.40114e-06 104.657 4.54598e-06 103L9.52908e-06 46C1.17501e-05 20.5949 20.5949 1.80046e-06 46 4.02145e-06L110 9.61651e-06C134.853 1.17892e-05 155 20.1472 155 45L155 110C155 134.853 134.853 155 110 155L52 155C50.3431 155 49 153.657 49 152L49 118Z" />
-    <rect width="40" height="40" rx="3" transform="matrix(1 8.74228e-08 8.74228e-08 -1 0 155)" />
-</svg>
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | OpenSuite</title>
+    <link rel="stylesheet" href="/cdn/css/style.min.css">
+</head>
 
-<div
-    class="w-full max-w-[450px] absolute top-1/2 left-1/2 [transform:translate(-50%,-50%);] p-6 rounded-md login-form border bg-foreground border-input shadow-md shadow-[rgba(40,40,40,0.2)]">
-    <div class="flex flex-col gap-6">
-        <div class="flex flex-col gap-1">
-            <h1 class="text-3xl font-bold">
-                Good <span id="time_of_day">day</span> <span id="time_of_day_emoji" class="text-[25px]"></span>,
-            </h1>
-            <p class="text-white/[.7]">
-                We hope <span id="day_part">you are having a</span><span id="adjective"> productive</span> day!
-            </p>
-        </div>
-        <div class="flex flex-col gap-3">
+<body class="text-white bg-pattern-diagonal2 h-screen w-screen">
 
-            <div class="relative flex flex-col gap-2">
-                <label for="email" class="block text-sm font-semibold text-label sr-only"> E-mail address </label>
-
-                <div class="relative">
-                    <input type="email" id="email" placeholder="E-mail address"
-                        class="w-full bg-input rounded-md border-[#0d0d0d] pe-10 shadow-sm p-3 text-[14px] placeholder-label" />
-
-                    <span
-                        class="pointer-events-none absolute inset-y-0 end-0 grid w-10 place-content-center text-label">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-4 w-4">
-                            <path fill-rule="evenodd"
-                                d="M5.404 14.596A6.5 6.5 0 1116.5 10a1.25 1.25 0 01-2.5 0 4 4 0 10-.571 2.06A2.75 2.75 0 0018 10a8 8 0 10-2.343 5.657.75.75 0 00-1.06-1.06 6.5 6.5 0 01-9.193 0zM10 7.5a2.5 2.5 0 100 5 2.5 2.5 0 000-5z"
-                                clip-rule="evenodd" />
-                        </svg>
-                    </span>
-                </div>
+    <form
+        class="w-full max-w-[450px] absolute top-1/2 left-1/2 [transform:translate(-50%,-50%);] p-6 rounded-md login-form border bg-foreground border-input">
+        <div class="flex flex-col gap-6">
+            <div class="flex flex-col gap-1">
+                <h1 class="text-3xl font-bold">
+                    Good <span id="time_of_day">day</span> <span id="time_of_day_emoji" class="text-[25px]"></span>,
+                </h1>
+                <p class="text-white/[.7]">
+                    We hope <span id="day_part">you are having a</span><span id="adjective"> productive</span> day!
+                </p>
             </div>
+            <div class="flex flex-col gap-3">
 
-            <div class="relative flex flex-col gap-2">
-                <label for="UserEmail" class="block text-sm font-semibold text-label sr-only"> Password </label>
+                <div class="relative flex flex-col gap-2">
+                    <label for="email" class="block text-sm font-semibold text-label sr-only"> E-mail address </label>
 
-                <div class="relative">
-                    <input type="password" id="password" placeholder="Password"
-                        class="w-full bg-input rounded-md border-[#0d0d0d] pe-10 shadow-sm p-3 text-[14px] placeholder-label" />
+                    <div class="relative">
+                        <input required type="email" id="email" placeholder="E-mail address"
+                            class="w-full bg-input rounded-md border-[#0d0d0d] pe-10 shadow-sm p-3 text-[14px] placeholder-label" />
 
-                    <span
-                        class="pointer-events-none absolute inset-y-0 end-0 grid w-10 place-content-center text-label">
-                        <svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                            stroke-linecap="round" stroke-linejoin="round">
-                            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
-                            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
-                        </svg>
-                    </span>
+                        <span
+                            class="pointer-events-none absolute inset-y-0 end-0 grid w-10 place-content-center text-label">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                                class="h-4 w-4">
+                                <path fill-rule="evenodd"
+                                    d="M5.404 14.596A6.5 6.5 0 1116.5 10a1.25 1.25 0 01-2.5 0 4 4 0 10-.571 2.06A2.75 2.75 0 0018 10a8 8 0 10-2.343 5.657.75.75 0 00-1.06-1.06 6.5 6.5 0 01-9.193 0zM10 7.5a2.5 2.5 0 100 5 2.5 2.5 0 000-5z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                        </span>
+                    </div>
                 </div>
+
+                <div class="relative flex flex-col gap-2">
+                    <label for="UserEmail" class="block text-sm font-semibold text-label sr-only"> Password </label>
+
+                    <div class="relative">
+                        <input required type="password" id="password" placeholder="Password"
+                            class="w-full bg-input rounded-md border-[#0d0d0d] pe-10 shadow-sm p-3 text-[14px] placeholder-label" />
+
+                        <span
+                            class="pointer-events-none absolute inset-y-0 end-0 grid w-10 place-content-center text-label">
+                            <svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                            </svg>
+                        </span>
+                    </div>
+                </div>
+
+
+                <button class="bg-button hover:bg-button-hover text-label p-2.5 rounded-md text-[14px]">Sign in</button>
+
+                <a href="#" class="text-blue-600 w-fit text-[14px]">Forgot your password?</a>
+
             </div>
-
-
-            <button class="bg-button hover:bg-button-hover text-label p-2.5 rounded-md text-[14px]">Sign in</button>
-
-            <a href="#" class="text-blue-600 w-fit text-[14px]">Forgot your password?</a>
-
         </div>
-    </div>
-</div>
+    </form>
 
-<a class="absolute bottom-5 left-5 text-faint after:content-['_↗'] text-[14px]"
-    href="https://github.com/open-suite/hub/blob/main/LICENSE">
-    Distributed under Apache License 2.0 terms
-</a>
+    <a class="absolute bottom-5 left-5 text-faint after:content-['_↗'] text-[14px]"
+        href="https://github.com/open-suite/hub/blob/main/LICENSE">
+        Distributed under Apache License 2.0 terms
+    </a>
 
-<script>
-    const current_hour = new Date().getHours()
+    <script>
+        var form = document.querySelector('form');
 
-    const adjective_element = document.getElementById('adjective');
-    const time_of_day_element = document.getElementById('time_of_day');
-    const day_part_element = document.getElementById('day_part');
-    const time_of_day_emoji_element = document.getElementById('time_of_day_emoji');
+        form.addEventListener('submit', function(event) {
+            event.preventDefault();
 
-    const adjectives = [' productive', ' profitable', ' fulfilling', ' rewarding', ' productive', ' progressive', ' transformative', 'n empowering', 'n efficient', ' successful'];
-    const time_of_day = current_hour < 12 ? 'morning' : current_hour < 18 ? 'afternoon' : 'evening';
-    const time_of_day_emoji = current_hour < 12 ? '☕' : current_hour < 18 ? '☀️' : '🌙';
-    const day_part = current_hour < 12 ? 'you\'ll have a' : current_hour < 18 ? 'you\'re having a' : 'you\'ve had a';
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
 
-    adjective_element.innerText = adjectives[Math.floor(Math.random() * adjectives.length)];
-    time_of_day_element.innerText = time_of_day;
-    time_of_day_emoji_element.innerText = time_of_day_emoji;
-    day_part_element.innerText = day_part
-</script>
+            
+            
+        });
+
+    </script>
+
+    <script>
+        const current_hour = new Date().getHours()
+
+        const adjective_element = document.getElementById('adjective');
+        const time_of_day_element = document.getElementById('time_of_day');
+        const day_part_element = document.getElementById('day_part');
+        const time_of_day_emoji_element = document.getElementById('time_of_day_emoji');
+
+        const adjectives = [' productive', ' profitable', ' fulfilling', ' rewarding', ' productive', ' progressive', ' transformative', 'n empowering', 'n efficient', ' successful'];
+        const time_of_day = current_hour < 12 ? 'morning' : current_hour < 18 ? 'afternoon' : 'evening';
+        const time_of_day_emoji = current_hour < 12 ? '☕' : current_hour < 18 ? '☀️' : '🌙';
+        const day_part = current_hour < 12 ? 'you\'ll have a' : current_hour < 18 ? 'you\'re having a' : 'you\'ve had a';
+
+        adjective_element.innerText = adjectives[Math.floor(Math.random() * adjectives.length)];
+        time_of_day_element.innerText = time_of_day;
+        time_of_day_emoji_element.innerText = time_of_day_emoji;
+        day_part_element.innerText = day_part
+    </script>
+
+</body>
+
+</html>
