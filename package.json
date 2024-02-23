@@ -1,8 +1,8 @@
 {
   "version": "1.0.0",
   "scripts": {
-    "test": "nodemon --exec 'npm run clean && npm run build && node dist/index.js' --watch src --watch views -e ts,handlebars",
-    "test:win": "nodemon --exec npm run test:win:command --watch src --watch views -e ts,handlebars",
+    "test": "nodemon --exec 'npm run clean && npm run build && node dist/index.js' --watch src --watch views -e ts,hbs",
+    "test:win": "nodemon --exec npm run test:win:command --watch src --watch views -e ts,hbs",
     "test:win:command": "npm run clean:win && npm run build:win && node dist/index.js",
     "clean": "rm -rf dist",
     "clean:win": "rmdir /s /q dist || echo \"\"",

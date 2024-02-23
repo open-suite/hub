@@ -3,17 +3,18 @@ import dotenv from 'dotenv';
 import path from 'path';
 import staticServe from 'serve-static';
 import compression from 'compression';
-import { engine } from 'express-handlebars';
+import { create } from 'express-handlebars';
 
 import appRouter from './routes/app';
 
 dotenv.config()
 
 const app = express();
+const hbs = create({extname: '.hbs'});
 
 // View engine setup
-app.engine('handlebars', engine());
-app.set('view engine', 'handlebars');
+app.engine('.hbs', hbs.engine);
+app.set('view engine', '.hbs');
 app.set('views', path.join(__dirname, 'views'));
 
 // Middleware

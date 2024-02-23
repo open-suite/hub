@@ -4,7 +4,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   darkMode: 'class',
-  content: ['./views/**/**.{html,handlebars}', './public/js/*.js'],
+  content: ['./views/**/**.hbs', './public/js/*.js'],
   theme: {
     extend: {
       colors: {
@@ -14,7 +14,8 @@ module.exports = {
         input: "#1c1c1c",
         label: "#ccc",
         faint: "#6b696c",
-        button: "#bdbdbd"
+        button: "#353535",
+        "button-hover": "#262626",
       }
     }
   },
