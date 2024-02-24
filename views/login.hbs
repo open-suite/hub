@@ -8,7 +8,18 @@
     <link rel="stylesheet" href="/cdn/css/style.min.css">
 </head>
 
-<body class="text-white bg-pattern-diagonal2 h-screen w-screen">
+<div
+    class="w-full max-w-[450px] absolute top-1/2 left-1/2 [transform:translate(-50%,-50%);] p-6 rounded-md login-form border bg-foreground border-input shadow-md shadow-[rgba(40,40,40,0.2)]">
+    <div class="flex flex-col gap-6">
+        <div class="flex flex-col gap-1">
+            <h1 class="text-3xl font-bold">
+                Good <span id="time_of_day">day</span> <span id="time_of_day_emoji"></span>,
+            </h1>
+            <p class="text-white/[.7]">
+                We hope <span id="day_part">you are having a</span><span id="adjective"> productive</span> day!
+            </p>
+        </div>
+        <div class="flex flex-col gap-3">
 
     <form
         class="w-full max-w-[450px] absolute top-1/2 left-1/2 [transform:translate(-50%,-50%);] p-6 rounded-md login-form border bg-foreground border-input">

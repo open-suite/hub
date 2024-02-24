@@ -8,10 +8,9 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        clinically: "#524c56",
-        background: "#131313",
-        foreground: "#151515",
-        input: "#1c1c1c",
+        background: "#131313",  // Onyx
+        foreground: "#151515",  // Cinder
+        input: "#1c1c1c",       // Mirage
         label: "#ccc",
         faint: "#6b696c",
         button: "#353535",

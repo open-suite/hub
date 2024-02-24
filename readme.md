@@ -4,6 +4,9 @@
 ![GitHub License](https://img.shields.io/github/license/open-suite/hub?style=flat-square)
 ![Docker Pulls](https://img.shields.io/docker/pulls/opensuite/hub?style=flat-square)
 ![Codacy grade](https://img.shields.io/codacy/grade/51108f51c81444fda5da0f0316cb8b55?style=flat-square)
+![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/open-suite/hub/github-code-scanning%2Fcodeql?style=flat-square&label=codeql)
+
+
 
 Open Suite is an interconnected business suite designed for diverse functions ranging from customer management to project management. It is fully open-source and self-hosted, offering the flexibility to utilize only the necessary components.
 
